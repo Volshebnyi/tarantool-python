@@ -6,7 +6,7 @@ import os.path
 # Read package version without importing it
 for line in open(os.path.join(os.path.dirname(__file__), "src", "tarantool", "__init__.py")):
     if line.startswith("__version__"):
-        exec line
+        __version__ = line.split('"')[1]
         break
 
 # Extra commands for documentation management

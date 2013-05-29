@@ -25,6 +25,10 @@ import sys
 import warnings
 
 
+class StandardError(Exception):
+    '''StandardError class for python 3.x'''
+
+
 class Error(StandardError):
     '''Base class for error exceptions'''
 

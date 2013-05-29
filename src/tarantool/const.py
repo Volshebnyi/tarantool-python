@@ -47,10 +47,10 @@ if sys.version_info < (2, 6):
 if sys.version_info > (3, 0):
     NUM = int
     STR = str
-    NUM64 = long
+    NUM64 = int
     RAW = bytes
 else:
     NUM = int
     STR = unicode
-    NUM64 = int
+    NUM64 = long
     RAW = bytes

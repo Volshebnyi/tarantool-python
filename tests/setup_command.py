@@ -5,6 +5,11 @@ import os.path
 import sys
 import unittest
 
+try:
+    import setuptools
+except ImportError:
+    import distribute as setuptools
+
 class test(setuptools.Command):
     user_options = []
     description = 'Run unit tests'

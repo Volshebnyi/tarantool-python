@@ -9,6 +9,11 @@ import struct
 from tarantool.const import *
 
 
+# FIXME: fix xrange error for python 3.x
+if 'xrange' not in globals():
+    xrange = range
+
+
 class Request(object):
     '''\
     Represents a single request to the server in compliance with the Tarantool protocol.
