@@ -1,6 +1,11 @@
 *.pyc
 *.pyo
 *.wpr
-/build/
-/dist/
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+
 /MANIFEST
