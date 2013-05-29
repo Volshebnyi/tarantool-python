@@ -2,6 +2,7 @@
 # pylint: disable=C0301,W0105,W0401,W0614
 
 import struct
+import sys
 
 
 # pylint: disable=C0103
@@ -38,3 +39,18 @@ RECONNECT_MAX_ATTEMPTS = 10
 RECONNECT_DELAY = 0.1
 # Number of reattempts in case of server return completion_status == 1 (try again)
 RETRY_MAX_ATTEMPTS = 10
+
+# Field types synonyms for python types
+if sys.version_info < (2, 6):
+    bytes = str
+
+if sys.version_info > (3, 0):
+    NUM = int
+    STR = str
+    NUM64 = long
+    RAW = bytes
+else:
+    NUM = int
+    STR = unicode
+    NUM64 = int
+    RAW = bytes
